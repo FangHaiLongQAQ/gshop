@@ -15,15 +15,15 @@ export default new VueRouter({
   // 所有路由
   routes: [
     { 
-      path: '/',
-      redirect: '/msite',     
-    },
-    { 
       path: '/miste',
       component: MSite,
       meta: {
         showFooter: true
       }      
+    },
+    { 
+      path: '/',
+      redirect: '/msite',     
     },
     { 
       path: '/order',
