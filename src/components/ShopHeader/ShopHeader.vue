@@ -45,27 +45,27 @@
           <span class="content-tag">
             <span class="mini-tag">品牌</span>
           </span>
-            <span class="content-name">{{info.name}}</span>
+            <span class="content-name">{{ info.name }}</span>
           </h2>
           <ul class="brief-modal-msg">
             <li>
-              <h3>{{info.score}}</h3>
+              <h3>{{ info.score }}</h3>
               <p>评分</p>
             </li>
             <li>
-              <h3>{{info.sellCount}}单</h3>
+              <h3>{{ info.sellCount }}单</h3>
               <p>月售</p>
             </li>
             <li>
-              <h3>{{info.description}}</h3>
-              <p>约{{info.deliveryTime}}分钟</p>
+              <h3>{{ info.description }}</h3>
+              <p>约{{ info.deliveryTime }}分钟</p>
             </li>
             <li>
-              <h3>{{info.deliveryPrice}}元</h3>
+              <h3>{{ info.deliveryPrice }}元</h3>
               <p>配送费用</p>
             </li>
             <li>
-              <h3>{{info.distance}}</h3>
+              <h3>{{ info.distance }}</h3>
               <p>距离</p>
             </li>
           </ul>
@@ -73,7 +73,7 @@
             <span>公告</span>
           </h3>
           <div class="brief-modal-notice">
-            {{info.bulletin}}
+            {{ info.bulletin }}
           </div>
           <div class="mask-footer" @click="toggleShopShow">
             <span class="iconfont icon-close"></span>
@@ -91,9 +91,9 @@
             <li class="activity-item" v-for="(support, index) in info.supports"
                 :key="index" :class="supportClasses[support.type]">
             <span class="content-tag">
-                <span class="mini-tag">{{support.name}}</span>
+                <span class="mini-tag">{{ support.name }}</span>
               </span>
-              <span class="activity-content">{{support.content}}</span>
+              <span class="activity-content">{{ support.content }}</span>
             </li>
           </ul>
           <div class="activity-sheet-close" @click="toggleSupportShow">
@@ -104,26 +104,6 @@
       </div>
     </transition>
         
-    <transition name="fade">
-      <div class="activity-sheet" v-show="supportShow">
-        <div class="activity-sheet-content">
-          <h2 class="activity-sheet-title">优惠活动</h2>
-          <ul class="list">
-            <li class="activity-item" v-for="(support, index) in info.supports"
-                :key="index" :class="supportClasses[support.type]">
-            <span class="content-tag">
-                <span class="mini-tag">{{support.name}}</span>
-              </span>
-              <span class="activity-content">{{support.content}}</span>
-            </li>
-          </ul>
-          <div class="activity-sheet-close" @click="toggleSupportShow">
-            <span class="iconfont icon-close"></span>
-          </div>
-        </div>
-        <div class="activity-sheet-cover"></div>
-      </div>
-    </transition>
   </div>
 </template>
 
