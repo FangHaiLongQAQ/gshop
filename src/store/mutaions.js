@@ -13,6 +13,8 @@ import {
   RECEIVE_INFO,
   INCREMENT_FOOD_COUNT,
   DECREMENT_FOOD_COUNT,
+  CLEAR_CART,
+  RECEIVE_SEARCH_SHOPS
 } from './mutaion-types';
 
 export default {
@@ -41,7 +43,7 @@ export default {
   },
 
   [RECEIVE_RATINGS] (state, { ratings }) {
-    state.rating = ratings;
+    state.ratings = ratings;
   },
 
   [RECEIVE_INFO] (state, { info }) {
@@ -71,9 +73,19 @@ export default {
         // 将food从cartFoods中移除
         state.cartFoods.splic(state.cartFoods.indexOf(food), 1);
       }
-    }
-    
+    }    
   },
+
+  [CLEAR_CART] (state) {
+    // 清除food中的count
+    state.cartFoods.forEach(food => food.count = 0);
+    // 移除购物车中的所有购物项
+    state.cartFoods = [];
+  },
+
+  [RECEIVE_SEARCH_SHOPS] (state, { searchShops }) {
+    state.searchShops = searchShops;
+  }
 
 
 }

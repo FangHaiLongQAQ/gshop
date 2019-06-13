@@ -41,33 +41,7 @@
                 </div>
               </li>              
             </ul>
-          </li>
-          <li class="food-list food-list-hook">
-            <h1 class="title">香浓甜粥</h1>
-            <ul>
-              <li class="food-item bottom-border-1px">
-                <div class="icon">
-                  <img
-                    width="57"
-                    height="57"
-                    src="http://fuss10.elemecdn.com/6/72/cb844f0bb60c502c6d5c05e0bddf5jpeg.jpeg?imageView2/1/w/114/h/114">
-                </div>
-                <div class="content">
-                  <h2 class="name">红枣山药粥</h2>
-                  <p class="desc">红枣山药糙米粥,素材包</p>
-                  <div class="extra">
-                    <span class="count">月售 17 份</span>
-                    <span>好评率 100%</span>
-                  </div>
-                  <div class="price">
-                    <span class="now">￥29</span>
-                    <span class="old">￥36</span>
-                  </div>
-                  <div class="cartcontrol-wrapper"></div>
-                </div>
-              </li>
-            </ul>
-          </li>
+          </li>          
         </ul>
       </div>
       <ShopCart></ShopCart>
@@ -167,7 +141,7 @@
         // 平滑滚动右侧列表
         this.foodsScroll.scrollTo(0, -scrollY, 500);        
       },
-            // 显示点击的food
+      // 显示点击的food
       showFood(food) {
         // 设置food
         this.food = food;
